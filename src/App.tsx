@@ -1,43 +1,34 @@
-const App = () => {
-  return (
-    <div className='categories-container'>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Hats</h2>
-          <p>Shop Now</p>
-        </div>
+import { Component, ReactNode } from "react";
+
+
+class App extends Component {
+
+  constructor(){
+    super() as any;
+    this.state = {
+      name: "Sreevarsh Vasista"
+    }
+
+  }
+
+  render(): ReactNode {
+    return (
+      <div>
+        <h1>Welcome to stackblitz development on class component</h1>
+        <p>Hi {(this.state as any).name}</p>
+        <button onClick={()=>{
+          this.setState(() => {return {name:"Vasista Sreevarsh"}}, ()=>{
+            // return (<h2>Added</h2>).
+          })
+        }}>Change Name</button>
       </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Jackets</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Sneakers</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Womens</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Mens</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-    </div>
-  );
+    )
+  }
+  // return (
+  //   <div>
+  //     <h1>Welcome to Stackblitz development</h1>
+  //   </div>
+  // );
 };
 
 export default App;
